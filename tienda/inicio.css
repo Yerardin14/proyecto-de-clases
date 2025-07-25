@@ -1,0 +1,148 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: aquamarine;
+    min-height: 100vh;
+
+}
+.panel{
+    display: grid;
+    gap:10px;
+    grid-template: 
+    "Cabecera" 50px
+    "Navegacion" 20px 
+    "Contenido" auto
+    "Barra"50px
+    "Pie" 20px;
+    
+    @media(min-width: 900px){
+    grid-template:
+    "Cabecera Cabecera Cabecera" 100px
+    "Navegacion Navegacion Navegacion" 50px
+    "Contenido Contenido  Barra" 100%
+    "Pie        Pie        Pie" 50px / 50px auto auto;
+    background-color: beige;
+    }
+    
+}
+.Cabecera{
+    background-color: rgb(204, 117, 179);
+    grid-area: Cabecera;
+    text-align: center;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.Cabecera h1 {
+    font-size:3rem;
+    font-style: italic;
+    font-family:fantasy;
+    text-transform: uppercase;
+    text-shadow: 2px 5px 2px white;
+}
+.Navegacion{
+    background-color: rgb(224, 55, 109, 0.792);
+    grid-area:Navegacion ;
+    padding: 10px 0;
+     display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.menu{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+.menu li{
+    margin: 0 20px;
+}
+.menu li a{
+    text-decoration: none;
+    color: rgb(55, 38, 167);
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+.menu li a:hover{
+    color: coral;
+    font: size 1.2rem;
+    border-bottom: 1px solid blue;
+    padding: 10px;
+    border-radius: 10px
+}
+.Contenido{
+    background-color: rgb(127, 197, 255);
+    grid-area: Contenido;
+     display:flex;
+    justify-content: center;
+    
+
+} 
+
+.Barra{
+    background-color: rgb(185, 62, 132);
+    grid-area: Barra;
+     display:flex;
+    justify-content: center;
+
+}
+.Pie{
+    background-color: rgb(220, 147, 147);
+    grid-area: Pie;
+     display:flex;
+    justify-content: center;
+}
+/*Diseño de Ofertas*/
+.ofertas{
+    margin: 20px;
+}
+.ofertas h2{
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+.cont-tarjetas{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.tarjeta {
+    background-color: rgb(165, 163, 159);
+    border-radius: 15px;
+    box-shadow: 0 5px 10px black;
+    width: 300px;
+    overflow: hidden;
+    text-align: center;
+    padding-bottom: 10px ;
+    transition: transform 0.5 ease;
+}
+.tarjeta img{
+    width: 100%;
+    height: auto;
+}
+.tarjeta button{
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: rgb(12, 151, 105);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: backgruond 0.5s;
+    width: 100%;
+}
+.tarjeta button:hover{
+    background-color: rgb(39, 234, 13);
+    color: black;
+}
+.tarjeta:hover{
+    transform: translateY(-10px);
+}
+.tarjeta label {
+    display: inline-block;
+}
